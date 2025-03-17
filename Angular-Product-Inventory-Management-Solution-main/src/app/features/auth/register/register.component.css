@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    font-family: 'Poppins', sans-serif;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(45deg, #ff9a9e, #fad0c4); }
+    100% { background: linear-gradient(45deg, #a18cd1, #fbc2eb); }
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #ff758c;
+    box-shadow: 0 0 10px rgba(255, 117, 140, 0.5);
+    outline: none;
+    transform: scale(1.05);
+}
+
+.error-message, small {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    box-shadow: 0 4px 10px rgba(255, 117, 140, 0.5);
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
